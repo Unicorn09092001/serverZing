@@ -1,30 +1,21 @@
 {
-  "name": "music-player",
+  "name": "server",
   "version": "1.0.0",
+  "description": "music-player-server",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/phamhiep2506/music-player.git"
-  },
+  "keywords": [],
   "author": "phamhiep2506 <phamhiep25062k@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "axios": "^0.24.0",
-    "cors": "^2.8.5",
-    "ejs": "^3.1.6",
-    "express": "^4.17.1",
-    "zingmp3-api-full": "^1.0.9"
-  },
+  "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.16"
   },
-  "description": "### UPDATE NEW VERSION V2.0.2",
-  "bugs": {
-    "url": "https://github.com/phamhiep2506/music-player/issues"
-  },
-  "homepage": "https://github.com/phamhiep2506/music-player#readme"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "zingmp3-api-full": "^1.0.13"
+  }
 }
