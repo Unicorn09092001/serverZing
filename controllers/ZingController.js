@@ -1,35 +1,41 @@
-const { ZingMp3 } = require("zingmp3-api-full")
+const ZingMp3 = require("zingmp3-api-full");
 
+/**
+ * class ZingController
+ */
 class ZingController {
-
+  /**
+   * @param {*} req
+   * @param {*} res
+   */
   getSong(req, res) {
     ZingMp3.getSong(req.query.id).then((data) => {
-      res.json(data)
-    })
+      res.json(data);
+    });
   }
 
-  getDetailPlaylist(req, res) {
+  getPlaylist(req, res) {
     ZingMp3.getDetailPlaylist(req.query.id).then((data) => {
-      res.json(data)
-    })
+      res.json(data);
+    });
   }
 
   getHome(req, res) {
-    ZingMp3.getHome().then((data) => {
-      res.json(data)
-    })
+    ZingMp3.getHome(req.query.page).then((data) => {
+      res.json(data);
+    });
   }
 
   getTop100(req, res) {
     ZingMp3.getTop100().then((data) => {
       res.json(data);
-    })
+    });
   }
 
   getChartHome(req, res) {
     ZingMp3.getChartHome().then((data) => {
       res.json(data);
-    })
+    });
   }
 
   getNewReleaseChart(req, res) {
@@ -41,7 +47,7 @@ class ZingController {
   getInfo(req, res) {
     ZingMp3.getInfoSong(req.query.id).then((data) => {
       res.json(data);
-    })
+    });
   }
 
   getArtist(req, res) {
@@ -82,4 +88,4 @@ class ZingController {
 
 }
 
-module.exports = new ZingController
+module.exports = new ZingController();
